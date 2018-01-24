@@ -1,0 +1,59 @@
+.page-header:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, @start-gradient, @end-gradient);
+}
+
+.header {
+
+  &__wrapper {
+    box-sizing: border-box;
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  &__open-nav {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    padding: 0;
+    margin: 0;
+    width: 60px;
+    height: 56px;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__open-nav:before {
+    position: absolute;
+    content: '';
+    right: 20px;
+    top: 17px;
+    width: 23px;
+    height: 4px;
+    background: @end-gradient;
+
+    box-shadow: 0 4px 0 transparent,
+    0 8px 0 @end-gradient,
+    0 12px 0 transparent,
+    0 16px 0 @end-gradient;
+  }
+}
+
+@media (max-width: 768px) {
+  .header{
+
+    &__wrapper {
+      padding: 0;
+    }
+
+    &__open-nav {
+      display: block;
+    }
+  }
+}

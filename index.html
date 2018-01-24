@@ -1,10 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>illusion</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>illusion</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header class="page-header">
+    <div class="header__wrapper">
+        <nav class="main-nav">
+            <div class="logo">
+                <a class="logo-text" href="#">illusion</a>
+            </div>
+            <!--main-nav-->
+            <ul class="main-nav__list main-nav--closed">
+                <li class="main-nav__item"><a href="#">Home</a></li>
+                <li class="main-nav__item"><a href="#">Pages</a></li>
+                <li class="main-nav__item"><a href="#">Portfolio</a>
+                    <!--first-submenu-->
+                    <ul class="sub-menu__list sub-menu__list--first">
+                        <li class="sub-menu__item sub-menu__item--first">
+                            <a href="#">Classic</a>
+                            <!--second-submenu-->
+                            <ul class="sub-menu__list sub-menu__list--second">
+                                <li class="sub-menu__item">
+                                    <a href="#">2 columns</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">2 columns with right sidebar</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">3 columns</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">3 columns with left sidebar</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">4 columns</a>
+                                </li>
+                            </ul><!--second-submenu end-->
+                        </li>
+                        <li class="sub-menu__item sub-menu__item--first">
+                            <a href="#">Sortable grid with text</a>
+                            <!--second-submenu-->
+                            <ul class="sub-menu__list sub-menu__list--second">
+                                <li class="sub-menu__item">
+                                    <a href="#">2 columns</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">2 columns with right sidebar</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">3 columns</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">3 columns with left sidebar</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">4 columns</a>
+                                </li>
+                            </ul><!--second-submenu end-->
+                        </li>
+                        <li class="sub-menu__item sub-menu__item--first">
+                            <a href="#">Sortable grid without text</a>
+                            <!--second-submenu-->
+                            <ul class="sub-menu__list sub-menu__list--second">
+                                <li class="sub-menu__item">
+                                    <a href="#">2 columns</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">2 columns with right sidebar</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">3 columns</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">3 columns with left sidebar</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">4 columns</a>
+                                </li>
+                            </ul><!--second-submenu end-->
+                        </li>
+                        <li class="sub-menu__item sub-menu__item--first">
+                            <a href="#">Sortable masonry</a>
+                            <!--second-submenu-->
+                            <ul class="sub-menu__list sub-menu__list--second">
+                                <li class="sub-menu__item">
+                                    <a href="#">2 columns</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">2 columns with right sidebar</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">3 columns</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">3 columns with left sidebar</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">4 columns</a>
+                                </li>
+                            </ul><!--second-submenu end-->
+                        </li>
+                        <li class="sub-menu__item sub-menu__item--first">
+                            <a href="#">Single project pages</a>
+                            <!--second-submenu-->
+                            <ul class="sub-menu__list sub-menu__list--second">
+                                <li class="sub-menu__item">
+                                    <a href="#">2 columns</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">2 columns with right sidebar</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">3 columns</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">3 columns with left sidebar</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a href="#">4 columns</a>
+                                </li>
+                            </ul><!--second-submenu end-->
+                        </li>
+                    </ul>
+                    <!--first-submenu end-->
+                </li>
+                <li class="main-nav__item"><a href="#">Blog</a></li>
+                <li class="main-nav__item"><a href="#">Features</a></li>
+                <li class="main-nav__item"><a href="#">Shortcodes</a></li>
+                <form action="" method="post" class="main-nav__search">
+                    <input type="search" name="" placeholder="поиск" class="search__input search__input--closed" />
+                    <button class="search__btn" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </ul><!--main-nav end-->
+        </nav>
+        <button class="header__open-nav"></button>
+    </div><!--header__wrapper end-->
+  </header>
 
+  <section class="about">
+      <div class="about__wrapper">
+          <h1 class="about__title">3 Column Sortable Masonry Portfolio</h1>
+          <div class="about__link-way">
+              <ul class="link-way__list">
+                  <li class="link-way__item"><a href="#">Home</a></li>
+                  <li class="link-way__item"><a href="#">Portfolio</a></li>
+                  <li class="link-way__item"><a href="#">Sortable Masonry</a></li>
+                  <li class="link-way__item"><a href="#">3 Columns</a></li>
+              </ul>
+          </div>
+      </div>
+  </section>
+
+
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

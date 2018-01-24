@@ -1,0 +1,38 @@
+@import "variables.less";
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 20px;
+  color: @base;
+  box-sizing: border-box;
+  .lato-light;
+}
+
+p {
+  text-transform: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button, input {
+  border: none;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a {
+  color: @base;
+  text-decoration: none;
+}
