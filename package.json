@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "illusion",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LevchenkoAnton/project.git"
+    "url": "git+https://github.com/LevchenkoAnton/Illusion.git"
   },
-  "author": "",
+  "author": "Anton Levchenko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LevchenkoAnton/project/issues"
+    "url": "https://github.com/LevchenkoAnton/Illusion/issues"
   },
-  "homepage": "https://github.com/LevchenkoAnton/project#readme",
+  "homepage": "https://github.com/LevchenkoAnton/Illusion#readme",
   "devDependencies": {
     "browser-sync": "^2.23.5",
     "gulp": "^3.9.1",
