@@ -1,3 +1,4 @@
+/*logo style*/
 .logo-text {
   line-height: 36px;
   font-size: 36px;
@@ -6,6 +7,7 @@
   color: transparent;
 }
 
+/*main navigation style*/
 .main-nav {
   display: flex;
   flex-wrap: wrap;
@@ -49,6 +51,14 @@
 
   &__item:hover .sub-menu__list--first {
     display: block;
+  }
+
+  &--fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: @white;
+    z-index: 100;
   }
 }
 
@@ -101,6 +111,7 @@
   }
 }
 
+/*page seach*/
 .search {
   &__input {
     display: inline-block;
@@ -136,6 +147,7 @@
     color: @end-gradient;
   }
 }
+
 
 @media (max-width: 1200px) {
 

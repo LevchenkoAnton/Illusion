@@ -11,19 +11,37 @@ burgerButton.addEventListener('click', function (event) {
 searchBtn.addEventListener("click", function (event) {
     event.preventDefault();
     searchInput.classList.toggle("search__input--closed")
-})
-
-
-var elem = document.querySelector('.portfolio__list');
-var msnry = new Masonry( elem, {
-    // options
-    itemSelector: '.portfolio__item',
-    columnWidth: 200
 });
-/*
 
-// element argument can be a selector string
-//   for an individual element
-var msnry = new Masonry( '.grid', {
-    // options
-});*/
+
+$(function() {
+
+    $(window).scroll(function() {
+        if($(this).scrollTop() >= 100) {
+            $('.page-header').addClass('main-nav--fixed');
+        }
+        else{
+            $('.page-header').removeClass('main-nav--fixed');
+        }
+    });
+
+    $('.portfolio__list').masonry({
+        // set itemSelector so .grid-sizer is not used in layout
+        fitWidth: true,
+        itemSelector: '.portfolio__item',
+        gutter: 10
+    });
+
+    $(window).scroll(function() {
+        if($(this).scrollTop() >= 100) {
+            $('.btn-to-up').fadeIn();
+        } else {
+            $('.btn-to-up').fadeOut();
+        }
+    });
+
+    $('.btn-to-up').click(function() {
+        $('body,html').animate({scrollTop:0},800);
+    });
+
+});

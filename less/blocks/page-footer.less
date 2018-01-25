@@ -1,0 +1,206 @@
+.footer:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, @start-gradient, @end-gradient);
+}
+
+.footer {
+  background: @bg-hover;
+
+  &__wrapper {
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 50px 0px;
+  }
+
+  &__contact {
+    padding: 0 20px;
+  }
+
+  &__title {
+    font-size: 20px;
+  }
+
+  &__copyright {
+    padding: 25px 0;
+    font-size: 16px;
+    text-align: center;
+    background: @footer-bg;
+    border-top: 1px solid @border;
+  }
+}
+
+.contact {
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list--left-column {
+    margin-right: 30px;
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
+
+  &__btn {
+    display: block;
+    .lato-reg;
+    text-align: center;
+    padding: 5px 15px;
+    transition: all 1s;
+    border-radius: 5px ;
+    border: 1px solid @btn;
+    background: transparent;
+  }
+
+  &__btn:hover {
+    border-color: @start-gradient;
+    color: @start-gradient;
+  }
+}
+
+.social {
+
+  &__list--top,
+  &__list--bottom {
+    display: flex;
+  }
+
+  &__item {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    transition: all 1s;
+  }
+
+  &__item--facebook:hover {
+    background: @bg-icon-facebook;
+  }
+
+  &__item--twitter:hover {
+    background: @bg-icon-twitter;
+  }
+
+  &__item--google:hover {
+    background: @bg-icon-google;
+  }
+
+  &__item--pinterest:hover {
+    background: @bg-icon-pinterest;
+  }
+
+  &__item--dribbble:hover {
+    background: @bg-icon-dribbble;
+  }
+
+  &__item--flickr:hover {
+    background: @bg-icon-flickr;
+  }
+
+  &__item--youtube:hover {
+    background: @bg-icon-youtube;
+  }
+
+  &__item--vimeo:hover {
+    background: @bg-icon-vimeo;
+  }
+
+  &__item--instagram:hover {
+    background: @bg-icon-instagram;
+  }
+
+  &__item--linkedin:hover {
+    background: @bg-icon-linkedin;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .footer {
+
+    &__wrapper {
+      padding: 0 10px;
+    }
+
+    &__content {
+      flex-wrap: wrap;
+      padding: 30px 15px;
+    }
+
+    &__about,
+    &__contact,
+    &__social {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .footer {
+
+    &__content {
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 10px;
+    }
+
+    &__contact {
+      padding: 0;
+    }
+
+    &__info {
+      text-align: center;
+    }
+
+    &__info br,
+    &__info span {
+      display: none;
+    }
+
+    &__title {
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 510px) {
+
+  .contact {
+
+    &__list {
+      flex-direction: column;
+    }
+  }
+
+}

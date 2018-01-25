@@ -4,6 +4,7 @@ var browserSync = require('browser-sync').create();
 var spritesmith = require('gulp.spritesmith');
 var minify = require('gulp-csso');
 var autoprefixer = require('gulp-autoprefixer');
+var sprite = require('gulp-svg-sprites');
 
 gulp.task('less', function() {
    return gulp.src('less/*.less')
@@ -30,13 +31,21 @@ gulp.task('server', function() {
 });
 
 gulp.task('sprite', function() {
-    var spriteData = gulp.src('img/icons/*.*') // путь, откуда берем картинки для спрайта
+    var spriteData = gulp.src('img/icons/*.svg') // путь, откуда берем картинки для спрайта
             .pipe(spritesmith({
-                imgName: 'sprite.png',
+                imgName: 'sprite.svg',
                 cssName: 'sprite.less',
             }));
 
    return spriteData.pipe(gulp.dest('sprite/')); // путь, куда сохраняем картинку
+});
+
+gulp.task('sprites', function () {
+    return gulp.src('img/icons/*.svg')
+        .pipe(sprite({
+            cssFile: "sprite.less"
+        }))
+        .pipe(gulp.dest("sprite"));
 });
 
 
