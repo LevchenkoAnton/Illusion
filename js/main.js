@@ -22,7 +22,7 @@ searchBtn.addEventListener("click", function (event) {
 $(function() {
 
     $(window).scroll(function() {
-        if($(this).scrollTop() >= 100) {
+        if($(this).scrollTop() >= 200) {
             $('.page-header').addClass('main-nav--fixed');
             $('.btn-to-up').fadeIn();
         }
