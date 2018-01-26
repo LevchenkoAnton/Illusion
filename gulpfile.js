@@ -1,11 +1,11 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var browserSync = require('browser-sync').create();
-var spritesmith = require('gulp.spritesmith');
 var minify = require('gulp-csso');
 var autoprefixer = require('gulp-autoprefixer');
 var sprite = require('gulp-svg-sprites');
 
+/*--------less style--------*/
 gulp.task('less', function() {
    return gulp.src('less/*.less')
        .pipe(less())
@@ -26,20 +26,11 @@ gulp.task('server', function() {
         }
     });
 
-/*    gulp.watch('less/!**!/!*', ['less']);*/
+    gulp.watch('less/**/*', ['less']);
     gulp.watch('**/*').on('change', browserSync.reload);
 });
 
-gulp.task('sprite', function() {
-    var spriteData = gulp.src('img/icons/*.svg') // путь, откуда берем картинки для спрайта
-            .pipe(spritesmith({
-                imgName: 'sprite.svg',
-                cssName: 'sprite.less',
-            }));
-
-   return spriteData.pipe(gulp.dest('sprite/')); // путь, куда сохраняем картинку
-});
-
+/*--------svg sprite--------*/
 gulp.task('sprites', function () {
     return gulp.src('img/icons/*.svg')
         .pipe(sprite({

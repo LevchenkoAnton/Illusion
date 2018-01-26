@@ -10,7 +10,12 @@ burgerButton.addEventListener('click', function (event) {
 
 searchBtn.addEventListener("click", function (event) {
     event.preventDefault();
-    searchInput.classList.toggle("search__input--closed")
+    if (searchInput.classList.contains("search__input--closed")) {
+        searchInput.classList.remove("search__input--closed");
+        searchInput.focus();
+    } else {
+        searchInput.classList.add("search__input--closed");
+    }
 });
 
 
@@ -19,23 +24,10 @@ $(function() {
     $(window).scroll(function() {
         if($(this).scrollTop() >= 100) {
             $('.page-header').addClass('main-nav--fixed');
+            $('.btn-to-up').fadeIn();
         }
         else{
             $('.page-header').removeClass('main-nav--fixed');
-        }
-    });
-
-    $('.portfolio__list').masonry({
-        // set itemSelector so .grid-sizer is not used in layout
-        fitWidth: true,
-        itemSelector: '.portfolio__item',
-        gutter: 10
-    });
-
-    $(window).scroll(function() {
-        if($(this).scrollTop() >= 100) {
-            $('.btn-to-up').fadeIn();
-        } else {
             $('.btn-to-up').fadeOut();
         }
     });
@@ -43,5 +35,19 @@ $(function() {
     $('.btn-to-up').click(function() {
         $('body,html').animate({scrollTop:0},800);
     });
+
+
+    // init Masonry
+    var $grid = $('.portfolio__list').masonry({
+        itemSelector: '.portfolio__item',
+        percentPosition: true,
+        columnWidth: '.portfolio__sizer',
+        gutter: '.gutter-sizer'
+    });
+// layout Masonry after each image loads
+    $grid.imagesLoaded().progress( function() {
+        $grid.masonry();
+    });
+
 
 });
